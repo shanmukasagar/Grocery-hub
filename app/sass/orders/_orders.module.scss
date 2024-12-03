@@ -1,0 +1,142 @@
+.orders-main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .header-main{
+        background-color: green;
+        height: 80px;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title{
+            font-size: 22px;
+            font-weight: 600;
+        }
+    }
+    .main-title{
+        font-size: 22px;
+        color: green;
+        font-weight: 500;
+    }
+    .all-orders-box{
+        display : flex;
+        flex-direction: column;
+        gap : 8px;
+        .orders-box-main{
+            display: flex;
+            width: 1000px;
+            background-color: #efeeee;
+            border-radius: 10px;
+            justify-content: space-around;
+            height: 45px;
+            align-items: center;
+            align-self: center;
+            .orders-content-main{
+                display: flex;
+                gap : 3px;
+                .order-title{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .order-content{
+                    font-size: 19px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .no-order{
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            color: gray;
+        }
+    }
+}
+@media only screen and (min-width : 320px) and (max-width: 480px) {
+    .orders-main{
+        .header-main{
+            .title{
+                font-size : 18px;
+            }
+        }
+        .main-title{
+            font-size : 19px;
+        }
+        .all-orders-box{
+            gap : 10px;
+            .orders-box-main{
+                width: 300px;
+                flex-direction: column;
+                gap: 5px;
+                padding: 12px;
+                height : 100px;
+                .orders-content-main{
+                    .order-title{
+                        font-size : 15px;
+                    }
+                    .order-content{
+                        font-size : 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+    .orders-main{
+        .header-main{
+            .title{
+                font-size : 17px;
+            }
+        }
+        .main-title{
+            font-size : 18px;
+        }
+        .all-orders-box{
+            gap : 10px;
+            .orders-box-main{
+                width: 500px;
+                flex-direction: column;
+                gap: 5px;
+                padding: 12px;
+                height : 100px;
+                .orders-content-main{
+                    .order-title{
+                        font-size : 16px;
+                    }
+                    .order-content{
+                        font-size : 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 768px) and (max-width: 1023px) {
+    .orders-main{
+        .header-main{
+            .title{
+                font-size : 20px;
+            }
+        }
+        .main-title{
+            font-size : 21px;
+        }
+        .all-orders-box{
+            gap : 8px;
+            .orders-box-main{
+                width: 750px;
+                .orders-content-main{
+                    .order-title{
+                        font-size : 17px;
+                    }
+                    .order-content{
+                        font-size : 17px;
+                    }
+                }
+            }
+        }
+    }
+}

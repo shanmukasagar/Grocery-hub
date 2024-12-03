@@ -1,0 +1,121 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.product-item-main{
+    width: 600px;
+    height: 400px;
+    @include flex-direction-column;
+    gap: 30px;
+    padding: 15px;
+    .cross-icon{
+        align-self: end;
+        cursor: pointer;
+    }
+    .alert{
+        height: 40px;
+        min-width : 500px;
+        justify-content: center;
+    }
+    .product-content{
+        display: flex;
+        gap: 40px;
+        .image-main{
+            width: 250px;
+            @include flex-center;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .description-main{
+            @include flex-direction-column;
+            gap: 10px;
+            .product-title{
+                font-size: $h3-font-size;
+                font-weight: $font-weight-bold;
+            }
+            .prod-desc{
+                font-size: $h4-font-size;
+                color: $icon-text-color;
+            }
+            .prod-price{
+                font-size: $h3-font-size;
+                font-weight: $font-weight-bold;
+            }
+            .product-quantity{
+                font-size: $h5-font-size;
+                font-weight: $font-weight-semibold;
+            }
+            .quantity-incre-button-gap{
+                @include flex-direction-column;
+                gap : 20px;
+                .quantity-incre-decre{
+                    @include flex-center;
+                    gap: 25px;
+                    width: 120px;
+                    padding: 5px;
+                    border: 1px solid $icon-text-color;
+                    border-radius: 5px;
+                    .increment-icon{
+                        cursor: pointer;
+                        padding: 2px;
+                        width: 30px;
+                        height: 20px;
+                    }
+                    .increment-icon:hover{
+                        background-color: $icon-text-color;
+                        border-radius : 5px;
+                    }
+                }
+                .button-style{
+                    width: 120px;
+                    @include button-style;
+                    text-transform: initial;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 320px) and (max-width: 539px) {
+    .product-item-main{
+        width: 270px; 
+        .alert{
+            min-width : 270px;
+        }
+        .product-content{
+            justify-content: center;
+            align-items : center;
+            gap: 20px;
+            flex-wrap : wrap;
+            .image-main{
+                width : 200px;
+                height : 250px;
+            }
+            .description-main{
+                align-items : center;
+            }
+        }
+    }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+    .product-item-main{
+        width: 440px; 
+        .alert{
+            min-width : 270px;
+        }
+        .product-content{
+            justify-content: center;
+            align-items : center;
+            gap: 20px;
+            flex-wrap : wrap;
+            .image-main{
+                width : 200px;
+                height : 250px;
+            }
+            .description-main{
+                align-items : center;
+            }
+        }
+    }
+}
+
+

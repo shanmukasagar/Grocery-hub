@@ -1,0 +1,104 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+  .footer-main{
+    @include flex-column-center;
+    gap: 25px;
+    background-color: #e5e7eb;
+    padding: 40px;
+    border-radius: 15px;
+    .footer-top{
+      @include flex-column-center;
+      gap: 15px;
+      .image-main{
+        @include flex-row-align-center;
+        gap: 30px;
+        .title-style{
+          font-size: 20px;
+          font-weight: 600;
+          color: green;
+        }
+      }
+      .content-style{
+        font-size: 17px;
+        color: #787575;
+      }
+    }
+    .links-main{
+      display: flex;
+      gap: 100px;
+      .link-style{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        font-size: 17px;
+      }
+    }
+    .icons-main{
+      display: flex;
+      gap: 60px;
+      .icon-style{
+        color : black
+      }
+    }
+  }
+  @media only screen and (min-width : 320px) and (max-width: 480px) {
+    .footer-main{
+      gap : 15px;
+      .footer-top{
+        .content-style{
+          font-size : 13px;
+        }
+      }
+      .links-main{
+        gap : 14px;
+        flex-wrap: wrap;
+        .link-style{
+          font-size : 9px;
+        }
+      }
+      .icons-main{
+        gap : 30px;
+      }
+    }
+  }
+  @media (min-width: 540px) and (max-width: 767px) {
+    .footer-main{
+      gap : 15px;
+      .footer-top{
+        .content-style{
+          font-size : 15px;
+        }
+      }
+      .links-main{
+        gap : 16px;
+        flex-wrap: wrap;
+        .link-style{
+          font-size : 11px;
+        }
+      }
+      .icons-main{
+        gap : 35px;
+      }
+    }
+  }
+  @media only screen and (min-width : 768px) and (max-width: 1023px) {
+    .footer-main{
+      gap : 15px;
+      .footer-top{
+        .content-style{
+          font-size : 15px;
+        }
+      }
+      .links-main{
+        gap : 25px;
+        flex-wrap: wrap;
+        .link-style{
+          font-size : 18px;
+        }
+      }
+      .icons-main{
+        gap : 45px;
+      }
+    }
+  }

@@ -1,0 +1,7 @@
+@import "../styles/mixins.scss";
+
+.main-layout-style{
+    margin : 20px;
+    @include flex-direction-column;
+    gap : 15px;
+}

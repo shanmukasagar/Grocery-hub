@@ -1,0 +1,19 @@
+.success-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    .success-msg{
+        color: green;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .button-style{
+        background-color: green;
+        color : white;
+        text-transform: initial;
+        width: 130px;
+        font-size: 17px;
+    }
+}

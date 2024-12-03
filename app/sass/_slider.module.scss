@@ -1,0 +1,38 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.slider-main{
+    display : flex;
+    gap : 40px;
+    @include flex-center;
+    .card-media{
+        width : 1100px;
+        height : 500px;
+    }
+    .icon-style{
+        color : $icon-text-color;
+        height : 120px;
+        width : 30px;
+        cursor: pointer;
+        &.disabled-icon {
+            opacity: 0.5;           // Lower opacity to indicate disabled state
+            cursor: not-allowed;    // Change the cursor to show that the icon is not clickable
+        }
+    }
+}
+@media only screen and (min-width : 320px) and (max-width: 480px) {
+    .slider-main{
+        display : none;
+        .icon-style{
+            display : none;
+        }
+    }
+}
+@media only screen and (min-width : 540px) and (max-width: 767px) {
+    .slider-main{
+        .card-media{
+            width : 335px;
+            height : 95px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.home-main{
+    @include flex-direction-column;
+    gap : 15px;
+}

@@ -1,0 +1,108 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.checkout-main{
+    @include flex-direction-column;
+    gap: 20px;
+    .checkout-top-box{
+        height: 70px;
+        background-color: green;
+        border-radius: 10px;
+        color: $grocery-background-white-color;
+        @include flex-center;
+        .checkout-title{
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    .checkout-content-main{
+        @include flex-space-around;
+        flex-wrap : wrap;
+        gap : 30px;
+        .personal-details-main{
+            width: 700px;
+            @include flex-direction-column;
+            gap: 12px;
+            .title-style{
+                font-size: 25px;
+                font-weight: 600;
+            }
+            .user-details-main{
+                display : flex;
+                flex-direction : column;
+                gap : 20px;
+                .fields-main{
+                    display : flex;
+                    gap : 20px;
+                    .error-border .css-1ll44ll-MuiOutlinedInput-notchedOutline {
+                        border: 0.5px solid red;
+                    }
+                }
+            }
+            .error-message{
+                color : red;
+                text-align: center;
+            }
+        }
+        .payment-box-main{
+            width: 400px;
+            border: 1.5px solid $category-background-color;
+            border-radius: 5px 5px 0px 0px;
+            .payment-top-style{
+                @include flex-center;
+                height: 50px;
+                background-color: $payment-top-color;
+                border-radius: 5px 5px 0px 0px;
+                .cart-items-count{
+                    font-size : 16px;
+                    font-weight : 600;
+                }
+            }
+            .payment-details-main{
+                padding: 15px;
+                @include flex-direction-column;
+                gap: 20px;
+                .content-main{
+                    @include flex-space-between;
+                    .total--style{
+                        font-size : 17px;
+                        font-weight : 600;
+                    }
+                    .tax-text-style{
+                        font-size : 15px;
+                    }
+                }
+                .divider-style{
+                    height : 0.5px;
+                    background-color : $category-background-color;
+                }
+                .button-style{
+                    @include button-style;
+                    width: 100%;
+                    text-transform: initial;
+                    border-radius: 5px;
+                    &.disabled-button{
+                        opacity: 0.5;
+                        cursor: not-allowed;
+                        background-color: green;
+                        color : white;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 320px) and (max-width: 480px) {
+    .checkout-main{
+        .checkout-content-main{
+            .personal-details-main{
+                width : 100%;
+                .user-details-main{
+                    .fields-main{
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.Header-main{
+    background-color : $grocery-background-white-color;
+    border : 0.4px solid #dad4d4;
+    border-radius: 10px;
+    padding : 12px;
+    .sub-header-main{
+        @include flex-align-items-center;
+        justify-content: space-between;
+        .Header-left-main{
+            @include flex-align-items-center;
+            gap : 25px;
+            .category-main{
+                width : 200px;
+                @include flex-align-items-center;
+                gap : 10px;
+                background-color : $category-background-color;
+                height : 45px;
+                justify-content: center;
+                border-radius : 50px;
+                cursor : pointer;
+            }
+            .cart-main{
+                @include flex-align-items-center;
+                gap : 10px;
+                .cart-icon{
+                    width : 40px;
+                    height : 30px;
+                }
+                .cart-text{
+                    font-size : $h2-font-size;
+                }
+            }
+            .button-style{
+                @include button-style;
+                width : 80px;
+                height : 35px;
+            }
+            .profile-style{
+                font-size: 26px;
+                color: green;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and (min-width : 320px) and (max-width: 480px) {
+    .Header-main{
+        border-radius: 10px;
+        padding : 5px;
+        .sub-header-main{
+            .Header-left-main{
+                gap : 10px;
+                .category-main{
+                    display : none;
+                }
+                .button-style{
+                    @include button-style;
+                    height : 30px;
+                    font-size : 11px;
+                    width : auto;
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 540px) and (max-width: 767px) {
+    .Header-main{
+        border-radius: 10px;
+        padding : 5px;
+        .sub-header-main{
+            .Header-left-main{
+                gap : 12px;
+                .button-style{
+                    @include button-style;
+                    height : 32px;
+                    font-size : 13px;
+                    width : auto;
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width : 768px) and (max-width: 1023px) {
+    .Header-main{
+        border-radius: 10px;
+        padding : 10px;
+        .sub-header-main{
+            .Header-left-main{
+                gap : 13px;
+                .button-style{
+                    @include button-style;
+                    height : 35px;
+                    font-size : 15px;
+                    width : auto;
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+}

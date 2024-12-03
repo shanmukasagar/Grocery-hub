@@ -1,0 +1,19 @@
+.failure-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    .failure-msg{
+        color: red;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .button-style{
+        background-color: green;
+        color : white;
+        text-transform: initial;
+        width: 130px;
+        font-size: 17px;
+    }
+}

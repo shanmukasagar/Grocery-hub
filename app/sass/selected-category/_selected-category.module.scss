@@ -1,0 +1,22 @@
+.selected-cat-main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .category-top{
+        display : flex;
+        flex-direction : column;
+        gap : 25px;
+        .selected-cat{
+            height: 100px;
+            background-color: green;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    
+}
